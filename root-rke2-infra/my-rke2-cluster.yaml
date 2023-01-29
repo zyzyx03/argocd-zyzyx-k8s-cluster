@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://github.com/zyzyx03/argocd-zyzyx-k8s-cluster
     targetRevision: HEAD
-    path: ./rke2-infra-apps/
+    path: ./rke2-infra-apps
 
     # directory
     directory:

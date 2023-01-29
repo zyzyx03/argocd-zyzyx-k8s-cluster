@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   finalizers:
-  - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.argoproj.io
   name: kube-prometheus-stack
   namespace: argocd
 spec:
@@ -24,5 +24,5 @@ spec:
     targetRevision: 42.0.3
   syncPolicy:
     syncOptions:
-    - ServerSideApply=true
-    - CreateNamespace=true
+      - ServerSideApply=true
+      - CreateNamespace=true
