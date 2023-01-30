@@ -19,9 +19,9 @@ spec:
           enabled: true
           # -- Enable usage of full FQDN of falcosidekick service (useful when a Proxy is used).
           fullfqdn: true
-        webui:
-          # -- enable Falcosidekick-UI
-          enabled: true
+          webui:
+            # -- enable Falcosidekick-UI
+            enabled: true
     repoURL: https://falcosecurity.github.io/charts
     targetRevision: 2.5.3
   syncPolicy:
