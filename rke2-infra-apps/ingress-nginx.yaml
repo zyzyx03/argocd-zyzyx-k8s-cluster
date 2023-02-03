@@ -14,9 +14,11 @@ spec:
     chart: ingress-nginx
     helm:
       values: |-
-        loadBalancerIP: 192.168.1.8
-        extraArgs:
-          - enable-ssl-passthrough
+        controller:
+          service:
+            loadBalancerIP: 192.168.1.8
+          extraArgs:
+            - enable-ssl-passthrough
     repoURL: https://kubernetes.github.io/ingress-nginx
     targetRevision: 4.4.2
   syncPolicy:
