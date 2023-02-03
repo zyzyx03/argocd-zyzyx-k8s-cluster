@@ -14,6 +14,21 @@ spec:
     chart: cert-manager
     helm:
       values: |-
+        extraArgs:
+          - v: 2
+          - cluster-resource-namespace: $(POD_NAMESPACE)
+          - leader-election-namespace: kube-system
+        volumeMounts:
+          - name: ca-pemstore
+            mountPath: /etc/ssl/certs/internal-ca.pem
+            subPath: internal-ca.pem
+            readOnly: false
+        volumes:
+          - name: ca-pemstore
+            configMap:
+              # Provide the name of the ConfigMap containing the files you want
+              # to add to the container
+              name: ca-pemstore
         installCRDs: true
     repoURL: https://charts.jetstack.io
     targetRevision: 1.11.0
