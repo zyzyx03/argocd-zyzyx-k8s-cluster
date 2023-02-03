@@ -14,10 +14,6 @@ spec:
     chart: cert-manager
     helm:
       values: |-
-        extraArgs:
-          - --v=2
-          - --cluster-resource-namespace=$(POD_NAMESPACE)
-          - --leader-election-namespace=kube-system
         volumeMounts:
           - name: ca-pemstore
             mountPath: /etc/ssl/certs/internal-ca.pem
