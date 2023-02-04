@@ -18,3 +18,5 @@ argocd-zyzyx-k8s-cluster
 ```
 
 ## Known Issues
+
+[prune option doesn't play nice with CiliumIdentity resource #10456](https://github.com/argoproj/argo-cd/issues/10456)
