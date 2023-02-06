@@ -14,28 +14,30 @@ spec:
     chart: mimir-distributed
     helm:
       values: |-
-        common:
-          storage:
-            backend: s3
-            s3:
-              endpoint: minio.zyzyx.virtnet:9001
-              secret_access_key: "grafanaMimir"~
-              access_key_id: "LW4jGgN0gJgfvpKHJaMCpijGIgdjNw4x"
-              insecure: true
+        mimir:
+          structuredConfig:
+            common:
+              storage:
+                backend: s3
+                s3:
+                  endpoint: minio.zyzyx.virtnet:9001
+                  secret_access_key: "grafanaMimir"~
+                  access_key_id: "LW4jGgN0gJgfvpKHJaMCpijGIgdjNw4x"
+                  insecure: true
 
-        blocks_storage:
-          s3:
-            bucket_name: mimir-blocks
+            blocks_storage:
+              s3:
+                bucket_name: mimir-blocks
 
-        alertmanager_storage:
-          s3:
-            bucket_name: mimir-alertmanager
+            alertmanager_storage:
+              s3:
+                bucket_name: mimir-alertmanager
 
-        ruler_storage:
-          s3:
-            bucket_name: mimir-ruler
+            ruler_storage:
+              s3:
+                bucket_name: mimir-ruler
     repoURL: https://grafana.github.io/helm-charts
-    targetRevision: 4.1.0-weekly.223
+    targetRevision: 4.0.1
   syncPolicy:
     syncOptions:
       - ServerSideApply=true
