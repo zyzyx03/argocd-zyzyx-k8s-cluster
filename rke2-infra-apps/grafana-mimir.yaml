@@ -35,7 +35,7 @@ spec:
           s3:
             bucket_name: mimir-ruler
     repoURL: https://grafana.github.io/helm-charts
-    targetRevision: 4.1.0-weekly.223
+    targetRevision: 4.0.1
   syncPolicy:
     syncOptions:
       - ServerSideApply=true
