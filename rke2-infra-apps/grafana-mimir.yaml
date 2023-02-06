@@ -25,7 +25,7 @@ spec:
               storage:
                 backend: s3
                 s3:
-                  endpoint: minio.zyzyx.virtnet:9000
+                  endpoint: 192.168.1.232:9000
                   secret_access_key: "grafanaMimir"
                   access_key_id: "LW4jGgN0gJgfvpKHJaMCpijGIgdjNw4x"
                   insecure: true
