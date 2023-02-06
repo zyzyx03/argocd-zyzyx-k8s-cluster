@@ -14,6 +14,11 @@ spec:
     chart: mimir-distributed
     helm:
       values: |-
+        global:
+          # -- Definitions to set up nginx resolver
+          dnsService: rke2-coredns-rke2-coredns
+          dnsNamespace: kube-system
+          clusterDomain: cluster.local
         mimir:
           structuredConfig:
             common:
