@@ -26,8 +26,8 @@ spec:
                 backend: s3
                 s3:
                   endpoint: 192.168.1.232:9000
-                  secret_access_key: "grafanaMimir"
-                  access_key_id: "LW4jGgN0gJgfvpKHJaMCpijGIgdjNw4x"
+                  secret_access_key: "SzAGIuo3iPdF7JhB"
+                  access_key_id: "12YMhOXmNlhm9XLqrDbjU5Rsh7ekSLzv"
                   insecure: true
 
             blocks_storage:
