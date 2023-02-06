@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    chart: grafana-mimir
+    chart: mimir-distributed
     helm:
       values: |-
         common:
@@ -35,7 +35,7 @@ spec:
           s3:
             bucket_name: mimir-ruler
     repoURL: https://grafana.github.io/helm-charts
-    targetRevision: 4.0.1
+    targetRevision: 4.1.0-weekly.223
   syncPolicy:
     syncOptions:
       - ServerSideApply=true
