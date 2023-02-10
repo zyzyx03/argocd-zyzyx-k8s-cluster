@@ -25,30 +25,31 @@ spec:
           podAnnotations:
             bucketSecretVersion: "0"
         mimir:
-          alertmanager_storage:
-            backend: s3
-            s3:
-              endpoint: minio.zyzyx.virtnet:9000
-              bucket_name: mimir-am-rule
-              access_key_id: ${AWS_ACCESS_KEY_ID}
-              secret_access_key: ${AWS_SECRET_ACCESS_KEY}
-              insecure: true
-          blocks_storage:
-            backend: s3
-            s3:
-              endpoint: minio.zyzyx.virtnet:9000
-              bucket_name: mimir-blocks
-              access_key_id: ${AWS_ACCESS_KEY_ID}
-              secret_access_key: ${AWS_SECRET_ACCESS_KEY}
-              insecure: true
-          rule_storage:
-            backend: s3
-            s3:
-              endpoint: minio.zyzyx.virtnet:9000
-              bucket_name: mimir-rule
-              access_key_id: ${AWS_ACCESS_KEY_ID}
-              secret_access_key: ${AWS_SECRET_ACCESS_KEY}
-              insecure: true
+          structuredConfig:
+            blocks_storage:
+              backend: s3
+              s3:
+                endpoint: minio.zyzyx.virtnet:9000
+                bucket_name: mimir-blocks
+                access_key_id: ${AWS_ACCESS_KEY_ID}
+                secret_access_key: ${AWS_SECRET_ACCESS_KEY}
+                insecure: true
+            alertmanager_storage:
+              backend: s3
+              s3:
+                endpoint: minio.zyzyx.virtnet:9000
+                bucket_name: mimir-am-rule
+                access_key_id: ${AWS_ACCESS_KEY_ID}
+                secret_access_key: ${AWS_SECRET_ACCESS_KEY}
+                insecure: true
+            rule_storage:
+              backend: s3
+              s3:
+                endpoint: minio.zyzyx.virtnet:9000
+                bucket_name: mimir-rule
+                access_key_id: ${AWS_ACCESS_KEY_ID}
+                secret_access_key: ${AWS_SECRET_ACCESS_KEY}
+                insecure: true
         minio:
           enabled: false
     repoURL: https://grafana.github.io/helm-charts
