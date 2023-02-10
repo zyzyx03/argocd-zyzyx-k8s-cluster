@@ -25,24 +25,24 @@ spec:
             s3:
               endpoint: 192.168.1.232:9000
               bucket_name: mimir-ruler
-              access_key_id: "gX6wy0R9WRO9kDAnoeNrGYb9q4d9mMNv"
-              secret_access_key: "MOV7Ou6INSSbllgN"
+              access_key_id: "MOV7Ou6INSSbllgN"
+              secret_access_key: "gX6wy0R9WRO9kDAnoeNrGYb9q4d9mMNv"
               insecure: true
           blocks_storage:
             backend: s3
             s3:
               endpoint: 192.168.1.232:9000
               bucket_name: mimir-tsdb
-              access_key_id: "gX6wy0R9WRO9kDAnoeNrGYb9q4d9mMNv"
-              secret_access_key: "MOV7Ou6INSSbllgN"
+              access_key_id: "MOV7Ou6INSSbllgN"
+              secret_access_key: "gX6wy0R9WRO9kDAnoeNrGYb9q4d9mMNv"
               insecure: true
           rule_storage:
             backend: s3
             s3:
               endpoint: 192.168.1.232:9000
               bucket_name: mimir-ruler
-              access_key_id: "gX6wy0R9WRO9kDAnoeNrGYb9q4d9mMNv"
-              secret_access_key: "MOV7Ou6INSSbllgN"
+              access_key_id: "MOV7Ou6INSSbllgN"
+              secret_access_key: "gX6wy0R9WRO9kDAnoeNrGYb9q4d9mMNv"
               insecure: true
         minio:
           enabled: false
