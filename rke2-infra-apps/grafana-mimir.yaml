@@ -40,7 +40,7 @@ spec:
             backend: s3
             s3:
               endpoint: 192.168.1.232:9000
-              bucket_name: mimir-ruler
+              bucket_name: mimir-rule
               access_key_id: "MOV7Ou6INSSbllgN"
               secret_access_key: "gX6wy0R9WRO9kDAnoeNrGYb9q4d9mMNv"
               insecure: true
