@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     chart: argo-workflows
-    repoURL: https://artifacthub.io/packages/helm/argo/argo-workflows
+    repoURL: https://argoproj.github.io/argo-helm
     targetRevision: 0.22.11
   syncPolicy:
     syncOptions:
