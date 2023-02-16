@@ -23,6 +23,7 @@ spec:
             # -- enable Falcosidekick-UI
             enabled: true
             redis:
+              storageEnabled: false
               storageSize: "4 Gi"
     repoURL: https://falcosecurity.github.io/charts
     targetRevision: 3.0.0
