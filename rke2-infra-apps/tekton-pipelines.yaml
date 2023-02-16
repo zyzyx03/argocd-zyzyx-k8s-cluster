@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: tekton-pipelines
   source:
-    repoURL: https://github.com/zyzyx03/argocd-zyzyx-k8s-cluster
+    repoURL: https://github.com/zyzyx03/argocd-zyzyx-k8s-cluster/tree/main/rke2-infra-apps
     targetRevision: HEAD
     path: tekton-pipelines
   syncPolicy:
