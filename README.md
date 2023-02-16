@@ -1,4 +1,4 @@
-# Cluster Bootstrapping Using ArgoCD App of Apps Patter
+# Cluster Bootstrapping Using ArgoCD App of Apps Pattern
 
 Utilizing [App-of-Apps](https://argoproj.github.io/argo-cd/operator-manual/cluster-bootstrapping/) pattern to provision cluster applications.
 

@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tekton-pipelines
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: tekton-pipelines
+  source:
+    repoURL: https://github.com/zyzyx03/argocd-zyzyx-k8s-cluster
+    targetRevision: HEAD
+    path: tekton-pipelines
+  syncPolicy:
+    syncOptions:
+      - ServerSideApply=true
+      - CreateNamespace=true
