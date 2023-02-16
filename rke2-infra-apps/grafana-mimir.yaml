@@ -24,6 +24,11 @@ spec:
                 name: mimir-bucket-secret
           podAnnotations:
             bucketSecretVersion: "0"
+        metaMonitoring:
+          serviceMonitor:
+            enabled: true
+            labels:
+              release: kube-prometheus-stack
         mimir:
           structuredConfig:
             blocks_storage:
