@@ -14,6 +14,10 @@ spec:
     chart: kube-prometheus-stack
     helm:
       values: |-
+      prometheus:
+        prometheusSpec:
+          remoteWrite:
+            - url: http://grafana-mimir-nginx.grafana.mimir.svc/api/v1/push
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: 45.1.1
   syncPolicy:
