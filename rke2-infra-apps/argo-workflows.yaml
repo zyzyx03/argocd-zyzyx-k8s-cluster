@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  name: argo-workflows
+  namespace: argocd
+spec:
+  destination:
+    namespace: argo-workflows
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    chart: argo-workflows
+    repoURL: https://artifacthub.io/packages/helm/argo/argo-workflows
+    targetRevision: 0.22.11
+  syncPolicy:
+    syncOptions:
+      - ServerSideApply=true
+      - CreateNamespace=true
