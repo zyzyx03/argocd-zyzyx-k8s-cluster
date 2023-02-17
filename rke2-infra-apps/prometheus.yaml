@@ -17,7 +17,7 @@ spec:
         prometheus:
           prometheusSpec:
             remoteWrite:
-              - url: http://grafana-mimir-nginx.grafana.mimir.svc/api/v1/push
+              - url: http://grafana-mimir-nginx.grafana-mimir.svc/api/v1/push
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: 45.1.1
   syncPolicy:
