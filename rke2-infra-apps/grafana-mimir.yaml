@@ -31,6 +31,8 @@ spec:
               release: kube-prometheus-stack
         mimir:
           structuredConfig:
+            limits:
+              max_global_series_per_user: 1000000
             blocks_storage:
               backend: s3
               s3:
