@@ -33,7 +33,7 @@ spec:
           structuredConfig:
             limits:
               max_global_series_per_user: 1000000
-              compactor_blocks_retention_period: 5d
+              compactor_blocks_retention_period: 30d
             blocks_storage:
               backend: s3
               s3:
@@ -58,6 +58,11 @@ spec:
                 access_key_id: ${AWS_ACCESS_KEY_ID}
                 secret_access_key: ${AWS_SECRET_ACCESS_KEY}
                 insecure: true
+        ingester:
+          persistentVolume:
+            accessModes:
+              - ReadWriteOnce
+            size: 7Gi
         minio:
           enabled: false
     repoURL: https://grafana.github.io/helm-charts
