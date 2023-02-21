@@ -33,7 +33,7 @@ spec:
           structuredConfig:
             limits:
               max_global_series_per_user: 1000000
-              compactor_blocks_retention_period: 5h
+              compactor_blocks_retention_period: 5d
             blocks_storage:
               backend: s3
               s3:
