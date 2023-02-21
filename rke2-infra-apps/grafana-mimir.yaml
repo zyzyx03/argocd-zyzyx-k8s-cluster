@@ -60,8 +60,10 @@ spec:
                 insecure: true
         ingester:
           persistentVolume:
+            enabled: true
             accessModes:
               - ReadWriteOnce
+            # Ingester data Persistent Volume size
             size: 7Gi
         minio:
           enabled: false
