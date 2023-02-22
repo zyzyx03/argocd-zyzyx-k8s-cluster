@@ -11,16 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    chart: kube-prometheus-stack
-    helm:
-      values: |-
-        prometheus:
-          prometheusSpec:
-            retention: 2h
-            remoteWrite:
-              - url: http://grafana-mimir-nginx.grafana-mimir.svc/api/v1/push
-    repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: 45.1.1
+    repoURL: https://github.com/zyzyx03/kubernetes-prometheus-manifest
   syncPolicy:
     syncOptions:
       - ServerSideApply=true
