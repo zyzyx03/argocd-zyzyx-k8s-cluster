@@ -12,6 +12,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/zyzyx03/kubernetes-prometheus-manifest
+    path: .
   syncPolicy:
     syncOptions:
       - ServerSideApply=true
