@@ -65,7 +65,7 @@ spec:
             accessModes:
               - ReadWriteOnce
             # Ingester data Persistent Volume size
-            size: 5Gi
+            size: 15Gi
           zoneAwareReplication:
             # -- Enable zone-aware replication for ingester
             enabled: false
