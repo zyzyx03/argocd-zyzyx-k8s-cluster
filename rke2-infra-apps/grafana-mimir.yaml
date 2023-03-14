@@ -60,20 +60,25 @@ spec:
                 insecure: true
         ingester:
           replicas: 1
-          zoneAwareReplication:
-            enabled: false
           persistentVolume:
             enabled: true
             accessModes:
               - ReadWriteOnce
-            size: 20Gi
-        # store_gateway:
-        #   replicas: 1
-        #     accessModes:
-        #       - ReadWriteOnce
-        #     size: 2Gi
-        #   zoneAwareReplication:
-        #     enabled: false
+            # Ingester data Persistent Volume size
+            size: 5Gi
+          zoneAwareReplication:
+            # -- Enable zone-aware replication for ingester
+            enabled: false
+        store_gateway:
+          replicas: 1
+          persistentVolume:
+            enabled: true
+            accessModes:
+              - ReadWriteOnce
+            size: 2Gi
+          zoneAwareReplication:
+            # -- Enable zone-aware replication for ingester
+            enabled: false
         minio:
           enabled: false
     repoURL: https://grafana.github.io/helm-charts
