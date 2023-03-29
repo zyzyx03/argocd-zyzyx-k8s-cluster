@@ -59,15 +59,13 @@ spec:
                 secret_access_key: ${AWS_SECRET_ACCESS_KEY}
                 insecure: true
         ingester:
-          replicas: 1
+          replicas: 2
           persistentVolume:
             enabled: true
             accessModes:
               - ReadWriteOnce
-            # Ingester data Persistent Volume size
             size: 15Gi
           zoneAwareReplication:
-            # -- Enable zone-aware replication for ingester
             enabled: false
         store_gateway:
           replicas: 1
@@ -76,9 +74,13 @@ spec:
             accessModes:
               - ReadWriteOnce
             size: 2Gi
-          zoneAwareReplication:
-            # -- Enable zone-aware replication for ingester
-            enabled: false
+        compactor:
+          replicas: 1
+          persistentVolume:
+            enabled: true
+            accessModes:
+              - ReadWriteOnce
+            size: 2Gi
         minio:
           enabled: false
     repoURL: https://grafana.github.io/helm-charts
