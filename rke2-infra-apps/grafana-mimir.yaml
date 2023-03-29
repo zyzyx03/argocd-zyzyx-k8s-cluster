@@ -74,6 +74,8 @@ spec:
             accessModes:
               - ReadWriteOnce
             size: 2Gi
+          zoneAwareReplication:
+            enabled: false
         compactor:
           replicas: 1
           persistentVolume:
@@ -81,6 +83,8 @@ spec:
             accessModes:
               - ReadWriteOnce
             size: 2Gi
+          zoneAwareReplication:
+            enabled: false
         minio:
           enabled: false
     repoURL: https://grafana.github.io/helm-charts
