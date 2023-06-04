@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-rke2-infra-app
+  name: root-rke2-mon-app
   # You'll usually want to add your resources to the argocd namespace.
   namespace: argocd
   # Add a this finalizer ONLY if you want these to cascade delete.
@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://github.com/zyzyx03/argocd-zyzyx-k8s-cluster
     targetRevision: HEAD
-    path: ./rke2-infra-apps
+    path: ./rke2-mon-apps
 
     # directory
     directory:
